@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discipline Engine</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header Section -->
+        <header>
+            <h1>DISCIPLINE ENGINE</h1>
+            <p id="current-date"></p>
+        </header>
+
+        <!-- Morning Phase: Input Section -->
+        <section id="planning-section" class="card">
+            <h2>Morning Intent</h2>
+            <p class="subtitle">Set a maximum of 5 core execution goals for today.</p>
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="What is a non-negotiable task today?">
+                <button id="add-btn">LOCK IN</button>
+            </div>
+        </section>
+
+        <!-- Task List Display Section -->
+        <section id="tasks-section" class="card">
+            <h2>Today's Blueprint</h2>
+            <ul id="task-list">
+                <!-- JavaScript will inject tasks here dynamically -->
+            </ul>
+        </section>
+
+        <!-- Night Phase: Action Section -->
+        <section id="action-section" class="card text-center">
+            <button id="evaluate-btn" class="gold-btn">INITIATE NIGHT EVALUATION</button>
+        </section>
+
+        <!-- Evaluation Modal/Overlay (Hidden by default) -->
+        <div id="evaluation-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Night Evaluation</h2>
+                <p>Accountability Check. Be completely honest with your execution score.</p>
+                <div id="evaluation-items">
+                    <!-- Tasks will load here with success/failure toggles -->
+                </div>
+                <button id="submit-evaluation" class="gold-btn">SUBMIT METRICS</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Section (Hidden until evaluated) -->
+        <section id="dashboard-section" class="card hidden">
+            <h2>Day's Verdict</h2>
+            <div class="metric-container">
+                <div class="score-circle">
+                    <span id="score-percentage">0%</span>
+                </div>
+                <p id="verdict-text"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

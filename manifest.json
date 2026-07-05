@@ -1,0 +1,9 @@
+{
+  "name": "Discipline Engine",
+  "short_name": "Discipline",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#d4af37",
+  "orientation": "portrait"
+}
